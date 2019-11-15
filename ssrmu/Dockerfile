@@ -1,12 +1,12 @@
 FROM alpine:3.9
 MAINTAINER FAN VINGA<fanalcest@gmail.com>
 
-ENV NODE_ID=0                     \
+ENV NODE_ID=4                     \
     DNS_1=1.0.0.1                 \
     DNS_2=8.8.8.8                 \
     SPEEDTEST=6                   \
-    CLOUDSAFE=0                   \
-    AUTOEXEC=0                    \
+    CLOUDSAFE=1                   \
+    AUTOEXEC=1                    \
     ANTISSATTACK=0                \
     MU_SUFFIX=zhaoj.in            \
     MU_REGEX=%5m%id.%suffix       \
@@ -18,7 +18,9 @@ ENV NODE_ID=0                     \
     MYSQL_USER=ss                 \
     MYSQL_PASS=ss                 \
     MYSQL_DB=shadowsocks          \
-    REDIRECT=github.com           \
+    DNS_IPV6=true                 \
+    CONNECT_VERBOSE_INFO=1        \
+    REDIRECT=:443#127.0.0.1:1443  \
     FAST_OPEN=false
 
 COPY . /root/shadowsocks
