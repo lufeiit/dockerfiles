@@ -15,8 +15,10 @@
     "obfs_param": "",
     "speed_limit_per_con": 0,
 
-    "dns_ipv6": false,
-    "connect_verbose_info": 0,
+    "timeout": 120,
+    "udp_timeout": 60,
+    "dns_ipv6": ${DNS_IPV6},
+    "connect_verbose_info": ${CONNECT_VERBOSE_INFO},
     "connect_hex_data": 0,
     "redirect": "${REDIRECT}",
     "fast_open": ${FAST_OPEN},
